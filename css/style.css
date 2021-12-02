@@ -1,1 +1,16 @@
-body{background: #000;}
+body{background: #000;overflow: hidden;} /* 스크롤바 제거 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.styleSnow {
+    position: absolute;
+    top: -20px;
+    animation: fall linear forwards; /* linear => 일정한 속도로 실행, forwards => 마지막 keyframe 유지*/
+}
+@keyframes fall {
+    to {
+        transform: translateY(105vh); /* 위에서 아래로 이동 */
+    }
+}
